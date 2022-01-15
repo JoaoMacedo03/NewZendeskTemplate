@@ -20,4 +20,4 @@ function App(): JSX.Element {
   );
 }
 
-export default App;
+export default App
