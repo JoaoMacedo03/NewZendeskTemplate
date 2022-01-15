@@ -1,6 +1,6 @@
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { ToastContainer } from 'react-toastify';
-import ThemeMaterialUI from './styles/materialUI';
+import ThemeMaterialUI from './styles/materialUI'
 import Page from './pages'
 import AppProvider from './hooks'
 import GlobalStyles from './styles/global'
