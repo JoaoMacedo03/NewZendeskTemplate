@@ -5,6 +5,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "eslint --fix",
+      "CI=true yarn test --bail --findRelatedTests",
       "git add"
     ]
   },
