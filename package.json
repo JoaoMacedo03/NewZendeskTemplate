@@ -9,11 +9,6 @@
       "git add"
     ]
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "dependencies": {
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
@@ -71,8 +66,6 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.0.2",
-    "@commitlint/config-conventional": "^16.0.0",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/styled-components": "^5.1.20",
     "@typescript-eslint/parser": "^5.9.1",
