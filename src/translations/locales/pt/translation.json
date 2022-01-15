@@ -1,7 +1,7 @@
 {
   "apps": {
     "sidebar": {
-      "title": "Informe o Importador/Exportador a ser criado",
+      "title": "Informe o Importador/Exportador a ser criadoo",
       "fieldLabel": "Importador/Exportador",
       "buttonText": "Criar",
       "errorOnCreateImporterExporter": "Falha ao criar Importador/Exportador.",
