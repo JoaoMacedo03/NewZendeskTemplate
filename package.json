@@ -2,10 +2,11 @@
   "name": "react-template",
   "version": "0.1.0",
   "private": true,
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo 'teste'"
-    }
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "@emotion/react": "^11.7.0",
@@ -41,7 +42,8 @@
     "set-prod": "cp ./zendesk-mock/manifest_prod.json ./zendesk-mock/manifest.json",
     "set-homolog": "cp ./zendesk-mock/manifest_homolog.json ./zendesk-mock/manifest.json",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -72,7 +74,8 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "husky": "^7.0.4",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.1.7",
     "prettier": "^2.5.1"
   }
 }
