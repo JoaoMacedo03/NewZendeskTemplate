@@ -1,0 +1,30 @@
+{
+  "name": "Importador/Exportador",
+  "author": {
+    "name": "AktieNow",
+    "email": "suporte@aktienow.com",
+    "url": "https://www.aktienow.com"
+  },
+  "location": {
+    "support": {
+      "new_ticket_sidebar": "http://localhost:3000?type=sidebar",
+      "ticket_sidebar": "http://localhost:3000?type=sidebar"
+    }
+  },
+  "private": false,
+  "defaultLocale": "en",
+  "version": "1.0",
+  "parameters": [
+    {
+      "name": "language",
+      "required": true,
+      "default": "pt"
+    },
+    {
+      "name": "importer_exporter_field_id",
+      "required": true,
+      "default": "1900001680445"
+    }
+  ],
+  "frameworkVersion": "2.0"
+}

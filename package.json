@@ -1,0 +1,73 @@
+{
+  "name": "react-template",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.2.2",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.0",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "date-fns": "^2.28.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-react": "^7.28.0",
+    "i18next": "^21.6.6",
+    "i18next-xhr-backend": "^3.2.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-i18next": "^11.15.3",
+    "react-icons": "^4.3.1",
+    "react-scripts": "4.0.3",
+    "react-text-mask": "^5.4.3",
+    "react-toastify": "^8.1.0",
+    "styled-components": "^5.3.3",
+    "typescript": "^4.5.4",
+    "zendesk_app_framework_sdk": "^2.0.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "rm -rf build && react-scripts build && sh genBuildPackage.sh",
+    "build-prod": "cp ./zendesk-mock/manifest_prod.json ./zendesk-mock/manifest.json && rm -rf build && react-scripts build && sh genBuildPackage.sh",
+    "build-homolog": "cp ./zendesk-mock/manifest_homolog.json ./zendesk-mock/manifest.json && rm -rf build && react-scripts build && sh genBuildPackage.sh",
+    "set-prod": "cp ./zendesk-mock/manifest_prod.json ./zendesk-mock/manifest.json",
+    "set-homolog": "cp ./zendesk-mock/manifest_homolog.json ./zendesk-mock/manifest.json",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/styled-components": "^5.1.20",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1"
+  }
+}

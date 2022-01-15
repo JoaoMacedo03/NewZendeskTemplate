@@ -1,0 +1,11 @@
+{
+  "apps": {
+    "sidebar": {
+      "title": "Inform the Importer/Exporter to be created",
+      "fieldLabel": "Importer/Exporter",
+      "buttonText": "Create",
+      "errorOnCreateImporterExporter": "Failed to create Importer/Exporter.",
+      "successCreateImporterExporter": "Importer/Exporter created successfully. Refresh the page."
+    }
+  }
+}

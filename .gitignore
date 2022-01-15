@@ -1,0 +1,4 @@
+node_modules/
+
+zendesk-mock/manifest_prod.json
+zendesk-mock/manifest.json
