@@ -4,14 +4,8 @@
   "private": true,
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "echo 'teste'"
     }
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint --fix",
-      "git add"
-    ]
   },
   "dependencies": {
     "@emotion/react": "^11.7.0",
@@ -79,7 +73,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.1.7",
     "prettier": "^2.5.1"
   }
 }
