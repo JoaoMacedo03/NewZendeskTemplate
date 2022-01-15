@@ -1,9 +1,9 @@
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { ToastContainer } from 'react-toastify';
-import ThemeMaterialUI from './styles/materialUI'
-import Page from './pages'
-import AppProvider from './hooks'
-import GlobalStyles from './styles/global'
+import ThemeMaterialUI from './styles/materialUI';
+import Page from './pages';
+import AppProvider from './hooks';
+import GlobalStyles from './styles/global';
 
 function App(): JSX.Element {
   return (
@@ -20,4 +20,4 @@ function App(): JSX.Element {
   );
 }
 
-export default App
+export default App;
