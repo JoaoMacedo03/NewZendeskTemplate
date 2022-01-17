@@ -143,7 +143,7 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  // testEnvironment: "jest-environment-jsdom",
+  testEnvironment: "jest-environment-jsdom",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -155,9 +155,9 @@ module.exports = {
   testMatch: ['**/__tests__/**/?(*.)+(spec|test).[tj]s?(x)'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  // testPathIgnorePatterns: [
-  //   "/node_modules/"
-  // ],
+  testPathIgnorePatterns: [
+    "/node_modules/"
+  ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],
@@ -176,7 +176,8 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    // "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/transforms/babelTransform.ts",
+    "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/transforms/babelTransform.ts",
+    // "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
     '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)':
       '<rootDir>/config/jest/transforms/fileTransform.ts',
   },
@@ -199,5 +200,3 @@ module.exports = {
   // Whether to use watchman for file crawling
   // watchman: true,
 };
-
-export {};

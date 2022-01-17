@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/bin/yarn add .husky/pre-push
+  /usr/bin/node /usr/bin/yarn add @testing-libary/dom babel-jest -D
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/.husky%2fpre-push: Not found
+  Error: https://registry.yarnpkg.com/@testing-libary%2fdom: Not found
       at Request.params.callback [as _callback] (/usr/lib/node_modules/yarn/lib/cli.js:66992:18)
       at Request.self.callback (/usr/lib/node_modules/yarn/lib/cli.js:140763:22)
       at Request.emit (events.js:400:28)
@@ -34,6 +34,7 @@ npm manifest:
     "lint-staged": {
       "*.{ts,tsx}": [
         "eslint --fix",
+        "cross-env CI=true yarn test --bail",
         "git add"
       ]
     },
@@ -47,6 +48,7 @@ npm manifest:
       "@types/jest": "^27.4.0",
       "@types/react-dom": "^17.0.11",
       "@typescript-eslint/eslint-plugin": "^5.9.1",
+      "cross-env": "^7.0.3",
       "date-fns": "^2.28.0",
       "eslint-config-airbnb": "^19.0.4",
       "eslint-plugin-react": "^7.28.0",
@@ -103,7 +105,7 @@ npm manifest:
       "eslint-plugin-jsx-a11y": "^6.5.1",
       "eslint-plugin-prettier": "^4.0.0",
       "eslint-plugin-react-hooks": "^4.3.0",
-      "husky": "^7.0.0",
+      "husky": "^7.0.4",
       "lint-staged": "^12.1.7",
       "prettier": "^2.5.1"
     }
@@ -4068,7 +4070,14 @@ Lockfile:
       safe-buffer "^5.0.1"
       sha.js "^2.4.8"
   
-  cross-spawn@7.0.3, cross-spawn@^7.0.0, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
+  cross-env@^7.0.3:
+    version "7.0.3"
+    resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
+    integrity sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==
+    dependencies:
+      cross-spawn "^7.0.1"
+  
+  cross-spawn@7.0.3, cross-spawn@^7.0.0, cross-spawn@^7.0.1, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
     version "7.0.3"
     resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
     integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
@@ -6208,7 +6217,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
     integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
   
-  husky@^7.0.0:
+  husky@^7.0.4:
     version "7.0.4"
     resolved "https://registry.yarnpkg.com/husky/-/husky-7.0.4.tgz#242048245dc49c8fb1bf0cc7cfb98dd722531535"
     integrity sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==

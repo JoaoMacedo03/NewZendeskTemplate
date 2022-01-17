@@ -71,7 +71,12 @@ function Sidebar(): JSX.Element {
         <CircularLoading alignOn="flex-end" />
       ) : (
         <ButtonContainer>
-          <Button type="button" variant="contained" onClick={handleCreate}>
+          <Button
+            type="button"
+            variant="contained"
+            onClick={handleCreate}
+            data-testid="create-importer-exporter"
+          >
             {t('apps.sidebar.buttonText')}
           </Button>
         </ButtonContainer>

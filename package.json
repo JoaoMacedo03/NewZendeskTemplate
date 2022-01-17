@@ -5,7 +5,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "eslint --fix",
-      "cross-env CI=true yarn test --bail",
+      "cross-env CI=true yarn test --bail --findRelatedTests",
       "git add"
     ]
   },
@@ -66,6 +66,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.11.2",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/styled-components": "^5.1.20",
     "@typescript-eslint/parser": "^5.9.1",
