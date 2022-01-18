@@ -5,6 +5,7 @@
       "fieldLabel": "Importador/Exportador",
       "buttonText": "Criar",
       "errorOnCreateImporterExporter": "Falha ao criar Importador/Exportador.",
+      "errorImporterExporterNotInformed": "Informe o importador/exportador a ser criado.",
       "successCreateImporterExporter": "Importador/Exportador criado com sucesso. Atualize a página."
     }
   }

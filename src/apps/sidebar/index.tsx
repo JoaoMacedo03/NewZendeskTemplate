@@ -18,27 +18,33 @@ function Sidebar(): JSX.Element {
   const handleCreate = async () => {
     try {
       setLoading(true);
+      if (!importerExporter)
+        throw new Error(t('apps.sidebar.errorImporterExporterNotInformed'));
       let auxId = importerExporter.toLowerCase();
-      auxId = auxId.replaceAll(' ', '_');
+      const auxIdArray = auxId.split(' ');
+      auxId = auxIdArray.join('_');
 
-      await zend.request({
-        url: `/api/v2/ticket_fields/${settings.importer_exporter_field_id}/options`,
-        type: 'POST',
-        data: {
-          custom_field_option: {
-            value: auxId,
-            name: importerExporter,
-            position: amount + 1,
+      zend
+        .request({
+          url: `/api/v2/ticket_fields/${settings.importer_exporter_field_id}/options`,
+          type: 'POST',
+          data: {
+            custom_field_option: {
+              value: auxId,
+              name: importerExporter,
+              position: amount + 1,
+            },
           },
-        },
-      });
-
+        })
+        .catch(() => {
+          throw new Error(t('apps.sidebar.errorOnCreateImporterExporter'));
+        });
       zend.notify(t('apps.sidebar.successCreateImporterExporter'), 'success');
       setLoading(false);
       return true;
-    } catch (err) {
+    } catch (err: any) {
       setLoading(false);
-      zend.notify(t('apps.sidebar.errorOnCreateImporterExporter'), 'error');
+      zend.notify(err.message, 'error');
       return false;
     }
   };
@@ -66,6 +72,7 @@ function Sidebar(): JSX.Element {
         label={t('apps.sidebar.fieldLabel')}
         fullWidth
         onChange={e => setImporetExporter(e.target.value)}
+        inputProps={{ 'data-testid': 'input-importer-exporter' }}
       />
       {loading ? (
         <CircularLoading alignOn="flex-end" />

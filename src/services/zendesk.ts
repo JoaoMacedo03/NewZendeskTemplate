@@ -60,7 +60,8 @@ export class Zendesk {
     return settings;
   }
 
-  notify(description: string, type: string, duration?: number | 5000): void {
+  notify(description: string, type: string, duration?: number | 5000): boolean {
     this.client.invoke('notify', description, type || undefined, duration);
+    return true;
   }
 }
